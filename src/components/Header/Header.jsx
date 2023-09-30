@@ -80,7 +80,6 @@ const Header = () => {
       <div className="navbar-end">
         {user ? (
           <>
-            <span className="mr-2">{user.email}</span>
             <a className="btn btn-sm" onClick={handleLogOut}>
               Sign Out
             </a>

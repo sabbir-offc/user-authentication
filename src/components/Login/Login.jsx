@@ -50,7 +50,7 @@ const Login = () => {
       });
   };
   return (
-    <div className="card mx-auto  flex-shrink-0 w-full max-w-sm shadow-lg mt-10 shadow-gray-50 bg-base-100">
+    <div className="card mx-auto max-w-sm flex-shrink-0 w-full shadow-lg mt-10 shadow-gray-50 bg-base-100">
       <div className="card-body">
         <form onSubmit={handleLogin}>
           <div className="form-control">

@@ -17,6 +17,15 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const name = e.target.name.value;
+
+    if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
+      return Swal.fire(
+        "Warning",
+        "Your password should have at least one uppercase and lower case character.",
+        "warning"
+      );
+    }
+
     signUp(email, password)
       .then((result) => {
         const currentUser = result.user;
@@ -50,7 +59,7 @@ const Register = () => {
       });
   };
   return (
-    <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 mx-auto mt-20 shadow-md">
+    <div className="relative w-fit md:w-96 flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 mx-auto mt-20 shadow-md">
       <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
         <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
           Sign Up
